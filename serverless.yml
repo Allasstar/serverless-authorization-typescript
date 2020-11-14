@@ -1,4 +1,4 @@
-service: serverless-delivery-app
+service: serverless-ping-app
 
 plugins:
   - serverless-plugin-typescript
