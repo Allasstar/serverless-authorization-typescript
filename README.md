@@ -1,15 +1,15 @@
 # Install all dependencies
-$ npm install
+> npm install
 
 # Run local/ofline 
-$ npm run local
+> npm run local
 or
-$ serverless offline
+> serverless offline
 
 # Deploy 
-$ npm run deploy
+> npm run deploy
 or
-$ serverless deploy
+> serverless deploy
 
 # Info
-$ sls offline --help
+> sls offline --help
