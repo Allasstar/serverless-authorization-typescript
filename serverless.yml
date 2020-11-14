@@ -1,0 +1,26 @@
+service: serverless-delivery-app
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+provider:
+  memorySize: 128
+  name: aws
+  region: us-east-2
+  runtime: nodejs12.x
+  stage: dev
+  versionFunctions: false
+
+functions:
+  authorizer:
+    handler: src/authorizer.handler
+    environment:
+      AUTH0_CLIENT_SECRET: ${env:AUTH0_CLIENT_SECRET}
+  ping:
+    events:
+      - http:
+          method: get
+          path: ping
+          authorizer: authorizer
+    handler: src/index.ping
