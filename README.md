@@ -4,14 +4,14 @@
 # Run local/ofline 
 > npm run local
 
-### or
+or
 
 > serverless offline
 
 # Deploy 
 > npm run deploy
 
-### or
+or
 
 > serverless deploy
 
