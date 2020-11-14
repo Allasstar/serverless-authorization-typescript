@@ -1,11 +1,11 @@
-import { APIGatewayProxyEvent, APIGatewayProxyResult, Handler, } from 'aws-lambda'
+import { APIGatewayProxyEvent, APIGatewayProxyResult, Handler } from 'aws-lambda';
 
-const { stringify } = JSON
+const { stringify } = JSON;
 
-export const ping: Handler<APIGatewayProxyEvent, APIGatewayProxyResult> 
+export const ping: Handler<APIGatewayProxyEvent, APIGatewayProxyResult>
 = async function pingHandler(event, context, callback) {
   return {
     body: stringify({ ping: 'ok' }),
     statusCode: 200,
-  }
-}
+  };
+};
